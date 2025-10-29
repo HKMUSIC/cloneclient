@@ -49,11 +49,11 @@ async def start_pm(client, message: Message, _):
     
     await loading_1.edit_text("<b>ʟᴏᴀᴅɪɴɢ</b>")
     C_BOT_SUPPORT_CHAT = await get_cloned_support_chat(a.id)
-    C_SUPPORT_CHAT = f"https://t.me/GOJO_NOBITA_II"
+    C_SUPPORT_CHAT = f"https://t.me/Chatparaside"
     # await asyncio.sleep(0.1)
     await loading_1.edit_text("<b>ʟᴏᴀᴅɪɴɢ.</b>")
     C_BOT_SUPPORT_CHANNEL = await get_cloned_support_channel(a.id)
-    C_SUPPORT_CHANNEL = f"https://t.me/GOJO_SUPPORT_GROUP_II"
+    C_SUPPORT_CHANNEL = f"https://t.me/Chatparaside"
     # await asyncio.sleep(0.1)
     await loading_1.edit_text("<b>ʟᴏᴀᴅɪɴɢ..</b>")
     await asyncio.sleep(0.1)
@@ -164,7 +164,7 @@ async def start_gp(client, message: Message, _):
     C_BOT_SUPPORT_CHAT = await get_cloned_support_chat(a.id)
     C_SUPPORT_CHAT = f"https://t.me/drx_supportchat"
     C_BOT_SUPPORT_CHANNEL = await get_cloned_support_channel(a.id)
-    C_SUPPORT_CHANNEL = f"https://t.me/lll_drx_network"
+    C_SUPPORT_CHANNEL = f"https://t.me/Chatparaside"
     # out = start_panel(_)
     out = [
                     [
