@@ -15,7 +15,7 @@ API_HASH = getenv("API_HASH")
 BOT_TOKEN = getenv("BOT_TOKEN")
 BOT_ID = getenv("BOT_ID")
 # -------------------------------------------------------
-OWNER_USERNAME = getenv("OWNER_USERNAME","II_YOUR_GOJO_ll")
+OWNER_USERNAME = getenv("OWNER_USERNAME","@PsychoFounder")
 # --------------------------------------------------------
 BOT_USERNAME = getenv("BOT_USERNAME" , "HinduMusicRobot")
 # --------------------------------------------------------
@@ -41,7 +41,7 @@ LOGGER_ID = int(getenv("LOGGER_ID"))
 CLONE_LOGGER = LOGGER_ID
 # ----------------------------------------------------------------
 # ----------------------------------------------------------------
-OWNER_ID = int(getenv("OWNER_ID", 7553434931))
+OWNER_ID = int(getenv("OWNER_ID", 7847021843))
 # -----------------------------------------------------------------
 # -----------------------------------------------------------------
 # config.py
@@ -54,10 +54,10 @@ HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 # ----------------------------------------------------------------
 # ----------------------------------------------------------------
 # ----------------------------------------------------------------
-SOURCE = getenv("SOURCE", "https://github.com/HKMUSIC/GOJO-NOBITA-BOT")
+SOURCE = getenv("SOURCE", "https://github.com/HKMUSIC/cloneclient")
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/HKMUSIC/GOJO-NOBITA-BOT",
+    "https://github.com/HKMUSIC/cloneclient",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 GIT_TOKEN = getenv(
@@ -72,9 +72,9 @@ GIT_TOKEN = getenv(
 
 # ------------------------------------------------------------------------
 # -------------------------------------------------------------------------
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/NOBITA_MUSIC_SUPPORT")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/GOJO_NOBITA_II")
-CHAT = getenv("CHAT", "https://t.me/GOJO_NOBITA_II")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/+zMTfrXoBxxgxZjc1")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/Chatparaside")
+CHAT = getenv("CHAT", "https://t.me/Chatparaside")
 # ------------------------------------------------------------------------------
 # -------------------------------------------------------------------------------
 
@@ -149,7 +149,7 @@ STREAMI_PICS = [
 ]
 
 START_IMG_URL = getenv(
-    "START_IMG_URL", "https://files.catbox.moe/ndz1uy.mp4"
+    "START_IMG_URL", "https://files.catbox.moe/if6mev.mp4"
 )
 
 HELP_IMG_URL = getenv(
