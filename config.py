@@ -15,11 +15,11 @@ API_HASH = getenv("API_HASH")
 BOT_TOKEN = getenv("BOT_TOKEN")
 BOT_ID = getenv("BOT_ID")
 # -------------------------------------------------------
-OWNER_USERNAME = getenv("OWNER_USERNAME","II_YOUR_GOJO_ll")
+OWNER_USERNAME = getenv("OWNER_USERNAME","PsychoFounder")
 # --------------------------------------------------------
-BOT_USERNAME = getenv("BOT_USERNAME" , "CUTE_ARADHYA56U_BOT")
+BOT_USERNAME = getenv("BOT_USERNAME" , "@SharvixMusicBot)
 # --------------------------------------------------------
-BOT_NAME = getenv("BOT_NAME" , "ARADYA MUSIC")
+BOT_NAME = getenv("BOT_NAME" , "Sharvi MUSIC")
 # ---------------------------------------------------------
 ASSUSERNAME = getenv("ASSUSERNAME" , "HINDU_MUSIC_ASSIST")
 # ---------------------------------------------------------
@@ -41,11 +41,11 @@ DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 17000))
 # ----------------------------------------------------------------
 
 # ----------------------------------------------------------------
-LOGGER_ID = int(getenv("LOGGER_ID",-1002372727102))
+LOGGER_ID = int(getenv("LOGGER_ID",-1003230998527))
 CLONE_LOGGER = LOGGER_ID
 # ----------------------------------------------------------------
 # ----------------------------------------------------------------
-OWNER_ID = int(getenv("OWNER_ID", 7450385463))
+OWNER_ID = int(getenv("OWNER_ID", 7448308658))
 # -----------------------------------------------------------------
 # -----------------------------------------------------------------
 # config.py
@@ -58,10 +58,10 @@ HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 # ----------------------------------------------------------------
 # ----------------------------------------------------------------
 # ----------------------------------------------------------------
-SOURCE = getenv("SOURCE", "https://github.com/HKMUSIC/GOJO-MUSIC-CLONE-BOT")
+SOURCE = getenv("SOURCE", "https://github.com/HKMUSIC/cloneclient")
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/HKMUSIC/GOJO-MUSIC-CLONE-BOT",
+    "https://github.com/HKMUSIC/cloneclient",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 GIT_TOKEN = getenv(
@@ -76,9 +76,9 @@ GIT_TOKEN = getenv(
 
 # ------------------------------------------------------------------------
 # -------------------------------------------------------------------------
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/II_BOT_SUPPORT_II")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/+pQxq8M-1_GRlZjI9")
-CHAT = getenv("CHAT", "https://t.me/+pQxq8M-1_GRlZjI9")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/+zMTfrXoBxxgxZjc1")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/Chatparaside")
+CHAT = getenv("CHAT", "https://t.me/Chatparaside")
 # ------------------------------------------------------------------------------
 # -------------------------------------------------------------------------------
 
@@ -147,13 +147,13 @@ confirmer = {}
 # ------------------------------------------------------------------------
 
 STREAMI_PICS = [
-"https://files.catbox.moe/gbghwb.mp4",
+"https://files.catbox.moe/if6mev.mp4",
 "https://files.catbox.moe/ok8tat.mp4",
 
 ]
 
 START_IMG_URL = getenv(
-    "START_IMG_URL", "https://files.catbox.moe/gbghwb.mp4"
+    "START_IMG_URL", "https://files.catbox.moe/if6mev.mp4"
 )
 
 HELP_IMG_URL = getenv(
