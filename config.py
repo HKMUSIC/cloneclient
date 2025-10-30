@@ -76,9 +76,9 @@ GIT_TOKEN = getenv(
 
 # ------------------------------------------------------------------------
 # -------------------------------------------------------------------------
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/+LZ_GBlBcqDgyODA1")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/+zMTfrXoBxxgxZjc1")
-CHAT = getenv("CHAT", "https://t.me/+zMTfrXoBxxgxZjc1")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/+zMTfrXoBxxgxZjc1")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/+LZ_GBlBcqDgyODA1")
+CHAT = getenv("CHAT", "https://t.me/+LZ_GBlBcqDgyODA1")
 # ------------------------------------------------------------------------------
 # -------------------------------------------------------------------------------
 
@@ -148,7 +148,10 @@ confirmer = {}
 
 STREAMI_PICS = [
 "https://files.catbox.moe/if6mev.mp4",
-"https://files.catbox.moe/ok8tat.mp4",
+"https://files.catbox.moe/12ohmf.mp4",
+"https://files.catbox.moe/7jci6i.mp4",
+"https://files.catbox.moe/wln49l.mp4",
+"https://files.catbox.moe/bx33gw.mp4",
 
 ]
 
