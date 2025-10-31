@@ -1,4 +1,4 @@
-from Clonify. import app 
+from Clonify import app 
 import asyncio
 import random
 from pyrogram import Client, filters
