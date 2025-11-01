@@ -7,6 +7,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import io
 import os
+from Clonify import app
 
 # --- Initialize Bot ---
 app = Client(
