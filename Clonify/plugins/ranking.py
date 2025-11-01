@@ -1,13 +1,17 @@
-from datetime import datetime, timedelta
-from pymongo import MongoClient
-from pyrogram import filters
+from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+from pymongo import MongoClient
+from datetime import datetime, timedelta
 import matplotlib.pyplot as plt
 import io
 
+# Initialize bot
+app = Client("ranking_bot", bot_token="BOT_TOKEN", api_id="20898349", api_hash="9fdb830d1e435b785f536247f49e7d87")
 
+# Database
 db = MongoClient().rankingdb
 rank_collection = db.rankings
+
 
 @app.on_message(filters.group & ~filters.bot)
 async def count_message(client, message):
@@ -17,8 +21,6 @@ async def count_message(client, message):
     user_id = user.id
 
     today_str = datetime.utcnow().strftime("%Y-%m-%d")
-    week_start = datetime.utcnow() - timedelta(days=datetime.utcnow().weekday())
-
     user_data = rank_collection.find_one({"chat_id": chat_id, "user_id": user_id})
 
     if not user_data:
@@ -33,12 +35,14 @@ async def count_message(client, message):
         })
     else:
         last_msg_date = datetime.strptime(user_data.get("last_message", today_str), "%Y-%m-%d")
-        updates = {"$inc": {"overall": 1}}
+        updates = {"$set": {"username": username}, "$inc": {"overall": 1}}
+
         # Reset today if new day
         if last_msg_date.date() != datetime.utcnow().date():
-            updates["$set"] = {"today": 1}
+            updates["$set"]["today"] = 1
         else:
             updates["$inc"]["today"] = 1
+
         # Reset week if new week
         if last_msg_date.isocalendar()[1] != datetime.utcnow().isocalendar()[1]:
             updates["$set"]["week"] = 1
@@ -48,10 +52,11 @@ async def count_message(client, message):
         updates["$set"]["last_message"] = today_str
         rank_collection.update_one({"chat_id": chat_id, "user_id": user_id}, updates)
 
-@app.on_message(filters.command("rankings"))
+
+@app.on_message(filters.command("rankings") & filters.group)
 async def show_rankings(client, message):
-    chat_id = message.chat.id
-    await send_leaderboard(client, message, chat_id, "overall")
+    await send_leaderboard(client, message, message.chat.id, "overall")
+
 
 async def send_leaderboard(client, message, chat_id, mode):
     top_users = list(rank_collection.find({"chat_id": chat_id}).sort(mode, -1).limit(10))
@@ -77,9 +82,9 @@ async def send_leaderboard(client, message, chat_id, mode):
 
     buttons = InlineKeyboardMarkup([
         [
-            InlineKeyboardButton("Overall", callback_data=f"rank_overall_{chat_id}"),
-            InlineKeyboardButton("Today", callback_data=f"rank_today_{chat_id}"),
-            InlineKeyboardButton("Week", callback_data=f"rank_week_{chat_id}")
+            InlineKeyboardButton("🏆 Overall", callback_data=f"rank_overall_{chat_id}"),
+            InlineKeyboardButton("📅 Today", callback_data=f"rank_today_{chat_id}"),
+            InlineKeyboardButton("🗓️ Week", callback_data=f"rank_week_{chat_id}")
         ]
     ])
 
@@ -91,10 +96,13 @@ async def send_leaderboard(client, message, chat_id, mode):
 
     await message.reply_photo(buffer, caption=caption, reply_markup=buttons)
 
+
 @app.on_callback_query(filters.regex(r"rank_(overall|today|week)_(\d+)"))
 async def rank_callback(client, callback_query):
     mode, chat_id = callback_query.data.split("_")[1], int(callback_query.data.split("_")[2])
+    await callback_query.answer(f"Showing {mode.capitalize()} leaderboard…", show_alert=False)
     await callback_query.message.delete()
-    fake_msg = type('obj', (object,), {'chat': callback_query.message.chat, 'reply_photo': callback_query.message.reply_photo})
-    await send_leaderboard(client, fake_msg, chat_id, mode)
+    await send_leaderboard(client, callback_query.message, chat_id, mode)
 
+
+app.run()
