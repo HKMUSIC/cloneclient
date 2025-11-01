@@ -4,10 +4,14 @@ from pymongo import MongoClient
 from datetime import datetime, timedelta
 import matplotlib.pyplot as plt
 import io
+import os
 
-# Initialize bot
-app = Client("ranking_bot", bot_token="BOT_TOKEN", api_id="20898349", api_hash="9fdb830d1e435b785f536247f49e7d87")
-
+app = Client(
+    "ranking_bot",
+    bot_token=os.getenv("BOT_TOKEN"),
+    api_id=int(os.getenv("API_ID")),
+    api_hash=os.getenv("API_HASH")
+)
 # Database
 db = MongoClient().rankingdb
 rank_collection = db.rankings
