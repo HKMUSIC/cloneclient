@@ -5,7 +5,7 @@ from pyrogram.enums import ChatType
 
 import config
 from Clonify import app
-from Clonify.core.call import SHUKLA, autoend
+from Clonify.core.call import Clonify, autoend
 from Clonify.utils.database import get_client, is_active_chat, is_autoend
 
 
