@@ -82,8 +82,8 @@ def welcomepic(pic, user, chatname, id, uname, brightness_factor=1.3):
     pfp = circle(pfp, brightness_factor=brightness_factor) 
     pfp = pfp.resize((500, 500))
     draw = ImageDraw.Draw(background)
-    font = ImageFont.truetype('NOBITA/assets/font.ttf', size=60)
-    welcome_font = ImageFont.truetype('NOBITA/assets/font.ttf', size=60)
+    font = ImageFont.truetype('Clonify/assets/font.ttf', size=60)
+    welcome_font = ImageFont.truetype('Clonify/assets/font.ttf', size=60)
     
  #   draw.text((630, 230), f"USERNAME : {uname}", fill=(255, 255, 255), font=font)
    # draw.text((630, 300), f'NAME: {user}', fill=(255, 255, 255), font=font)
