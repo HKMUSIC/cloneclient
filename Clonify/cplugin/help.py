@@ -36,9 +36,9 @@ async def helper_private(
 
     #Cloned Bot Support Chat and channel
     C_BOT_SUPPORT_CHAT = await get_cloned_support_chat(bot.id)
-    C_SUPPORT_CHAT = f"https://t.me/drx_supportchat"
+    C_SUPPORT_CHAT = f"https://t.me/shavixchat"
     C_BOT_SUPPORT_CHANNEL = await get_cloned_support_channel(bot.id)
-    C_SUPPORT_CHANNEL = f"https://t.me/lll_drx_network_lll"
+    C_SUPPORT_CHANNEL = f"https://t.me/chatparaside"
 
     is_callback = isinstance(update, types.CallbackQuery)
     if is_callback:
