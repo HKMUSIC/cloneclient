@@ -5,7 +5,9 @@ from pyrogram.enums import ChatAction, ParseMode
 from pyrogram import filters
 from config import API_KEY
 
-BASE_URL = "https://api.together.xyz/v1/chat/completions"
+API_KEY = "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"
+
+BASE_URL = "https://api.groq.com/openai/v1/chat/completions"
 
 @app.on_message(
     filters.command(
