@@ -1,5 +1,5 @@
 import requests
-from SHUKLAMUSIC import app
+from Clonify import app
 from pyrogram.enums import ChatAction
 from pyrogram import filters
 import base64
