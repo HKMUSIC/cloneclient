@@ -7,7 +7,7 @@ from Clonify.utils.filters_func import GetFIlterMessage, get_text_reason, SendFi
 from Clonify.utils.yumidb import user_admin
 from pyrogram import filters
 from pyrogram.enums import ChatMemberStatus
-from telegram import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
+from pyrogram.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
 
 @app.on_message(filters.command("setfilter") & admin_filter)
 @user_admin
