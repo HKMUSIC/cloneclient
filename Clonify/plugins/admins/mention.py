@@ -2,7 +2,7 @@ import asyncio
 from pyrogram.enums import ChatType, ChatMemberStatus
 from Clonify import app
 from pyrogram import filters
-from Clonify.utils.clonify_ban import admin_filter
+from Clonify.utils.Clonify_ban import admin_filter
 
 
 
