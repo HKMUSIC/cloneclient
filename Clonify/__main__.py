@@ -7,6 +7,7 @@ from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
 from Clonify import LOGGER, app, userbot
+from Clonify import app
 from Clonify.core.call import PRO
 from Clonify.misc import sudo
 from Clonify.plugins import ALL_MODULES
@@ -56,4 +57,4 @@ async def init():
 
 
 if __name__ == "__main__":
-    asyncio.get_event_loop().run_until_complete(init())
+    app.run() 
