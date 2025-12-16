@@ -9,6 +9,7 @@ telebot==0.0.5
 bing_image_downloader 
 beautifulsoup4
 bs4
+groq
 cloudscraper
 deepai
 dnspython
