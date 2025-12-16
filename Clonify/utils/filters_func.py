@@ -1,6 +1,6 @@
 from enum import Enum, auto
 from Clonify import app
-from Clonify.types import InlineKeyboardMarkup, Message
+from telegram import InlineKeyboardMarkup, Message
 from Clonify.utils.msg_types import button_markdown_parser
 from Clonify.utils.notes_func import NoteFillings
 from emojis import decode
