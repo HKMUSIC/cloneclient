@@ -1,7 +1,7 @@
 import re
 from Clonify import app
 from config import BOT_USERNAME
-from Clonify.utils.Shukla_ban import admin_filter
+from Clonify.utils.Clonify_ban import admin_filter
 from Clonify.mongo.filtersdb import *
 from Clonify.utils.filters_func import GetFIlterMessage, get_text_reason, SendFilterMessage
 from Clonify.utils.yumidb import user_admin
