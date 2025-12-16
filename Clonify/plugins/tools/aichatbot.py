@@ -96,11 +96,11 @@ def time_greeting():
 def name_trigger(text: str) -> bool:
     """
     Triggers on:
-    tidal
-    Tidal
-    hi tidal
-    tidal baby
-    tidal❤️
+    Sharvi
+    hey Sharvi
+    hi Sharvi
+    cutie
+    hello
     """
     text = text.lower()
     return BOT_NAME_LOWER in text
