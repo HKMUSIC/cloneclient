@@ -12,7 +12,7 @@ from pyrogram.errors import UserAlreadyParticipant, UserNotParticipant, ChatAdmi
 from Clonify import app, Userbot
 from typing import List, Union
 from pyrogram import filters
-from Clonify.core.call import SHUKLA
+from Clonify.core.call import Clonify
 from pyrogram.types import VideoChatEnded, Message
 from pytgcalls import PyTgCalls, StreamType
 from pytgcalls.types.input_stream import AudioPiped, AudioVideoPiped
