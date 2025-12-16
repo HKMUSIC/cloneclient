@@ -6,6 +6,7 @@ from groq import Groq
 from os import getenv
 import re
 from datetime import datetime
+from pyrogram.enums import ChatMemberStatus
 import random
 
 # ─── CONFIG ──────────────────────────────────────────
@@ -119,23 +120,51 @@ def group_trigger(message: Message) -> bool:
 
 # ─── CHATBOT TOGGLE ──────────────────────────────────
 @app.on_message(filters.command("chatbot") & filters.group)
-async def chatbot_toggle(_, message: Message):
-    if not message.from_user or message.from_user.id != CHATBOT_ADMIN_ID:
-        return await message.reply_text("🚫 Only bot owner can control chatbot.")
+async def chatbot_toggle(client, message: Message):
+    user = message.from_user
+    chat_id = message.chat.id
+
+    if not user:
+        return
+
+    # ── OWNER OR GROUP ADMIN CHECK ──
+    if user.id == CHATBOT_ADMIN_ID:
+        allowed = True
+    else:
+        try:
+            member = await client.get_chat_member(chat_id, user.id)
+            allowed = member.status in (
+                ChatMemberStatus.ADMINISTRATOR,
+                ChatMemberStatus.OWNER
+            )
+        except Exception:
+            allowed = False
+
+    if not allowed:
+        return await message.reply_text(
+            "Only admins Allowed."
+        )
 
     if len(message.command) < 2:
-        return await message.reply_text("Usage:\n/chatbot enable\n/chatbot disable")
+        return await message.reply_text(
+            "Usage:\n/chatbot enable\n/chatbot disable"
+        )
 
     action = message.command[1].lower()
-    chat_id = message.chat.id
 
     if action == "enable":
         CHATBOT_ENABLED_GROUPS.add(chat_id)
-        await message.reply_text("✨ Chatbot enabled in this group.")
+        await message.reply_text("✨ Chatbot enabled")
 
     elif action == "disable":
         CHATBOT_ENABLED_GROUPS.discard(chat_id)
-        await message.reply_text("🔕 Chatbot disabled in this group.")
+        await message.reply_text("🔕 Chatbot disabled")
+
+    else:
+        await message.reply_text("❌ Invalid option. Use enable / disable.")
+
+
+
 
 # ─── STICKER HANDLER ─────────────────────────────────
 @app.on_message(filters.sticker & ~filters.bot & ~filters.via_bot)
