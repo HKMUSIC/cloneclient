@@ -41,11 +41,11 @@ DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 17000))
 # ----------------------------------------------------------------
 
 # ----------------------------------------------------------------
-LOGGER_ID = int(getenv("LOGGER_ID",-1003230998527))
+LOGGER_ID = int(getenv("LOGGER_ID",-1003497101254))
 CLONE_LOGGER = LOGGER_ID
 # ----------------------------------------------------------------
 # ----------------------------------------------------------------
-OWNER_ID = int(getenv("OWNER_ID", 7767253726))
+OWNER_ID = int(getenv("OWNER_ID", 1684261042))
 # -----------------------------------------------------------------
 # -----------------------------------------------------------------
 # config.py
@@ -76,8 +76,8 @@ GIT_TOKEN = getenv(
 
 # ------------------------------------------------------------------------
 # -------------------------------------------------------------------------
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/+zMTfrXoBxxgxZjc1")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/+LZ_GBlBcqDgyODA1")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/VeronCoders")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/ATTACHME9T")
 CHAT = getenv("CHAT", "https://t.me/+LZ_GBlBcqDgyODA1")
 # ------------------------------------------------------------------------------
 # -------------------------------------------------------------------------------
